@@ -7,7 +7,6 @@ def solution(dartResult):
     ch_dic = {1:"",2:"",3:""}
     cnt = 0
     for idx, data in enumerate(dartResult):
-        print(idx, data, cnt)
         if 48 <= ord(data) <= 57:
             if idx == 0:
                 cnt += 1
@@ -15,7 +14,6 @@ def solution(dartResult):
                 cnt += 1
                 
         ch_dic[cnt] = ch_dic[cnt] + data
-        print(ch_dic)
 
     for chance, score in ch_dic.items():
         sc_dic[chance] = score_cal(chance, score)
