@@ -51,6 +51,42 @@ def solution(numbers, hand):
                 
     return answer
 
+
+def solution(numbers, hand):
+    answer = ''
+    num_dic = {0:(3,1),1:(0,0),2:(0,1),3:(0,2),4:(1,0),5:(1,1),6:(1,2),7:(2,0),8:(2,1),9:(2,2),'*':(3,0),'#':(3,2)}
+    L,R = '*', '#'
+    for pad in numbers:
+        L_dis = 0
+        R_dis = 0
+        if pad == 1 or pad == 4 or pad == 7:
+            L = pad
+            answer += 'L'
+        
+        if pad == 3 or pad == 6 or pad == 9:
+            R = pad
+            answer += 'R'
+            
+        if pad == 2 or pad == 5 or pad == 8 or pad == 0:
+            for p, l, r in zip(num_dic[pad],num_dic[L], num_dic[R]):
+                L_dis += abs(p-l)
+                R_dis += abs(p-r)
+
+            if L_dis < R_dis:
+                L = pad
+                answer += 'L'
+                
+            elif L_dis > R_dis:
+                R = pad
+                answer += 'R'
+            
+            else:
+                if hand[0].upper() == 'L': L = pad
+                elif hand[0].upper() == 'R': R = pad
+                answer += hand[0].upper()
+            
+    return answer
+    
 numbers =[7, 0, 8, 2, 8, 3, 1, 5, 7, 6, 2]
 hand = "left"
 #LRLLRRLLLRR

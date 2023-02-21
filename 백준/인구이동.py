@@ -1,5 +1,6 @@
 import sys
 from collections import deque
+from pprint import pprint
 
 dx = [1, 0, -1, 0]
 dy = [0, 1, 0, -1]
@@ -38,7 +39,7 @@ def bfs(row, column):
     for x, y in union:
         A[x][y] = union_sum//cnt
 
-    print(A)
+    pprint(A)
     return cnt
 
 answer = 0
