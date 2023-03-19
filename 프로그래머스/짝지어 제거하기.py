@@ -1,3 +1,5 @@
+#문자열 상태로 재할당 해주면 시초뜸
+
 def solution(s):
     answer = []
     for i in s:

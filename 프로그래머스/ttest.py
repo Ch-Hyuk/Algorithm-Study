@@ -42,10 +42,5 @@ from itertools import combinations
 
 # ingredient = [1, 3, 2, 1, 2, 1, 3, 1, 2]
 # print(solution(ingredient))
-
-s = "a"
-print(int(s))
-skip = "a"
-for s in s:
-    if s in skip:
-        print("?")
+동규 = 1
+print(동규)

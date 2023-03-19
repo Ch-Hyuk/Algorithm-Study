@@ -117,3 +117,12 @@ que.remove(1)
 print(que)                      #deque(['zwef', 'zz', 'b', 2, 3, 4, 5, 6, 7, 8])
 que.clear()
 print(que)                      #deque([])
+
+
+#최대공약수, 최소공배수
+#기본
+#def Gcd(a, b):
+
+import math
+
+
